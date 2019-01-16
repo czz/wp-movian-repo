@@ -1,0 +1,26 @@
+/*
+ *  Movian Repo Admin Css
+ */
+
+
+.toplevel_page_movianrepo #movianrepo-urls-input .urls {
+  min-width: 300px;
+  width: 50%;
+}
+
+.toplevel_page_movianrepo  #movianrepo-add:before, .toplevel_page_movianrepo #movianrepo-urls-input .movianrepo-remove:before {
+  font-family: dashicons;
+  font-size:20px;
+}
+
+.toplevel_page_movianrepo  #movianrepo-add:before {
+  content :"\f132";
+}
+
+.toplevel_page_movianrepo #movianrepo-urls-input .movianrepo-remove:before {
+  content :"\f153";
+}
+
+.toplevel_page_movianrepo  #movianrepo-add, .toplevel_page_movianrepo #movianrepo-urls-input .movianrepo-remove {
+  text-decoration:none;
+}
