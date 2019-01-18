@@ -6,6 +6,8 @@ Description: Plugin for Generating Movian repository json response
 Author: czz78
 Version: 1.0
 Author URI: http://czz78.com/
+License: GPLv3 or later
+Text Domain: movianrepo
 */
 
 
