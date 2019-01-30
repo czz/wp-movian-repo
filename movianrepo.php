@@ -4,7 +4,7 @@ Plugin Name: Movian Repo
 Plugin URI: http://github.com/czz/wp-movian-repo
 Description: Plugin for Generating Movian repository json response
 Author: czz78
-Version: 1.0
+Version: 1.0.1
 Author URI: http://czz78.com/
 */
 
