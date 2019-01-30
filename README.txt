@@ -14,7 +14,7 @@ This plugin serves the developers of the movian plugin to easily create the nece
 Upload the WP Movian Repo plugin to your blog, Activate it.
 
 == Changelog ==
-= 1.0.0 =
-*Release Date - 18 January 2019*
+= 1.0.1 =
+*Release Date - 30 January 2019*
 
 * Fisrt Release
