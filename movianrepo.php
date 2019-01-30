@@ -6,8 +6,6 @@ Description: Plugin for Generating Movian repository json response
 Author: czz78
 Version: 1.0
 Author URI: http://czz78.com/
-License: GPLv3 or later
-Text Domain: movianrepo
 */
 
 
@@ -42,7 +40,20 @@ function movian_repo_ajax() {
 
     $list = $options['urls'];
 
-    $mp = new MovianRepo();
+    $mp = new MovianRepo( function($url) {
+
+                              $request = wp_remote_get($url, array( 'timeout' => 20, 'User-Agent' => MovianRepo::getUserAgent() ));
+
+                              if( is_wp_error( $request ) ) {
+                                  return false;
+                              }
+                              $result = wp_remote_retrieve_body($request);
+
+                              return $result;
+                          }
+
+                        );
+
     $json = $mp->build($list);
 
     header('Content-Type: application/json');
@@ -51,5 +62,4 @@ function movian_repo_ajax() {
     wp_die(); // this is required to terminate immediately and return a proper response
 
 }
-
 
