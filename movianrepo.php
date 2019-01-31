@@ -4,7 +4,7 @@ Plugin Name: Movian Repo
 Plugin URI: http://github.com/czz/wp-movian-repo
 Description: Plugin for Generating Movian repository json response
 Author: czz78
-Version: 1.0.1
+Version: 1.0
 Author URI: http://czz78.com/
 */
 
@@ -24,7 +24,7 @@ require_once(MOVIANREPO_PLUGIN_DIR . 'class/movian_repo.php');
 if( is_admin() ) {
 
     // Add setting page
-    $movianrepo_settings_page = new MovianRepoSettingsPage();
+    $movianrepo_settings_page = new MovianRepoSettingsPage("movianrepo");
 
 }
 
@@ -35,6 +35,11 @@ if( is_admin() ) {
 add_action( 'wp_ajax_movian_repo', 'movian_repo_ajax' );
 add_action( 'wp_ajax_nopriv_movian_repo', 'movian_repo_ajax' );
 function movian_repo_ajax() {
+
+    $json = get_transient( 'movianrepo' );
+
+    if( false === $json) {
+
 
     $options = get_option('movianrepo_option_name', array() );
 
@@ -55,6 +60,10 @@ function movian_repo_ajax() {
                         );
 
     $json = $mp->build($list);
+
+    set_transient( 'movianrepo', $json, YEAR_IN_SECONDS);
+
+    }
 
     header('Content-Type: application/json');
     echo $json;

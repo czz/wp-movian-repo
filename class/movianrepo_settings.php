@@ -11,13 +11,33 @@ class MovianRepoSettingsPage {
     private $options;
 
     /**
+     * Holds the transient name
+     */
+    private $transient;
+
+
+    /**
      * Start up
      */
-    public function __construct() {
+    public function __construct($transient = NULL) {
+
+        $this->transient = $transient;
 
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
         add_action( 'admin_init', array( $this, 'page_init' ) );
         add_action('admin_enqueue_scripts', array($this,'enqueue_scripts'));
+
+
+        if($this->transient !== NULL) {
+
+            add_action('update_option', function( $option_name, $old_value, $value) {
+                if ( ($old_value['urls'] != $value['urls']) &&  $option_name == "movianrepo_option_name") {
+                    delete_transient( $this->transient );
+                }
+            }, 10, 4);
+
+        }
+
 
     }
 
@@ -152,6 +172,7 @@ class MovianRepoSettingsPage {
         ?></ul><?php
 
     }
+
 
 
 }
