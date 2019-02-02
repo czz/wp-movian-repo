@@ -8,10 +8,11 @@ License: GPLv3 or later
 WP Movian Repo is a plugin to create the json response that is needed for the developer's repository
 
 == Description ==
-This plugin serves the developers of the movian plugin to easily create the necessary json response and the url to give to the customers that will insert in the media center settings.
-This plugin is relying on the main Github site and its API ( https://github.com https://api.github.com ) to retrieve links to build a json response. It doesn't save any file from git repo to wordpress site, just grabs links for the response.
+This plugin serves the developers of the movian plugins to easily create the necessary url feed to give to the users that will insert in the media center settings.
+This plugin use Github public API's ( https://api.github.com ) to retrieve links to build a json response. It doesn't save any file from git repo to wordpress site, just grabs links for the response.
 
 Starting with Movian 6.0 supports multiple feed of plugins and this plugin is an easy way to generate movian plugin feeds.
+
 
 == Privacy Notices ==
 
