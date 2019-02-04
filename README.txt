@@ -5,14 +5,12 @@ Requires at least: 5.0
 Requires PHP: 7.0
 License: GPLv3 or later
 
-WP Movian Repo is a plugin to create the json response that is needed for the developer's repository
+WP Movian Repo is a plugin to create zip download link of a git repository.
 
 == Description ==
-This plugin serves the developers of the movian plugins to easily create the necessary url feed to give to the users that will insert in the media center settings.
-This plugin use Github public API's ( https://api.github.com ) to retrieve links to build a json response. It doesn't save any file from git repo to wordpress site, just grabs links for the response.
+This plugin is made to easily create the necessary zip download url.
 
-Starting with Movian 6.0 supports multiple feed of plugins and this plugin is an easy way to generate movian plugin feeds.
-
+Starting with Movian 6.0 supports multiple feeds.
 
 == Privacy Notices ==
 
