@@ -1,22 +1,20 @@
 # wp-movian-repo
 
-Wordpress Plugin for Movian Repository Json response
+WP Movian Repo is a plugin to create zip download link of a git repository.
 
+## Description
 
-## How to publish plugins
+This plugin is made to easily create the necessary zip download url.
 
-Starting with Movian 6.0 supports multiple feed of plugins. For more information how to add new feeds to Movian see this article.
+Starting with Movian 6.0 supports multiple feeds.
 
-Note: There is no longer a central plugin repository hosted at this site. See this article for more info
+== Privacy Notices ==
 
-The easiest way to publish plugins is to commit each of them to a public repo at github.
+This plugin does not:
 
-See https://github.com/andoma/movian-plugin-modarchive for an example how this should look.
-
-Then you can use the movian-repo tool found at https://github.com/czz/movian-repo to generate plugin feeds.
-
-Currently this tool only work with github hosted plugins.
-
+    track users by stealth;
+    send any data to external servers;
+    use cookies.
 
 ## How to install
 
